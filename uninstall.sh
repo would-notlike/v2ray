@@ -1,8 +1,5 @@
 #!/bin/bash
-echo "1
-1
-8888
-
-
+echo "2
+Y
 
 " | bash <(curl -s -L https://git.io/v2rayinstall.sh)
