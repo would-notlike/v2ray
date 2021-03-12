@@ -6,3 +6,4 @@ echo "1
 
 
 " | bash <(curl -s -L https://git.io/v2rayinstall.sh)
+v2ray url
