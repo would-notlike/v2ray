@@ -1038,7 +1038,28 @@ install() {
 	get_ip
 	config
 	show_config_info
+
+	stop_firewall
 }
+
+# 简单粗暴，关闭防火墙
+stop_firewall(){
+	# 笨笨的检测系统类型方法
+	if [[ $(command -v yum) ]] && [[ $(command -v systemctl) ]]; then
+		# CentOS
+		# 关闭防火墙
+		systemctl stop firewalld
+		# 设置开机禁用防火墙
+		systemctl disable firewalld.service
+		echo " 关闭防火墙."
+	elif [[ $(command -v apt-get) ]] && [[ $(command -v systemctl) ]] && [[ $(command -v ufw) ]]; then
+		# Debian or Ubuntu
+		# 关闭防火墙
+		ufw disable
+		echo " 关闭防火墙.."
+	fi
+}
+
 uninstall() {
 
 	if [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f $backup && -d /etc/v2ray/233boy/v2ray ]]; then
