@@ -829,7 +829,7 @@ install_v2ray() {
 open_port() {
 	if [[ $cmd == "apt-get" ]]; then
 		if [[ $1 != "multiport" ]]; then
-
+			echo -e "$red 哎呀呀...install端口设置if...$none"
 			iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport $1 -j ACCEPT
 			iptables -I INPUT -m state --state NEW -m udp -p udp --dport $1 -j ACCEPT
 			ip6tables -I INPUT -m state --state NEW -m tcp -p tcp --dport $1 -j ACCEPT
@@ -840,7 +840,7 @@ open_port() {
 			# firewall-cmd --reload
 
 		else
-
+			echo -e "$red 哎呀呀...install端口设置else...$none"
 			local multiport="${v2ray_dynamic_port_start_input}:${v2ray_dynamic_port_end_input}"
 			iptables -I INPUT -p tcp --match multiport --dports $multiport -j ACCEPT
 			iptables -I INPUT -p udp --match multiport --dports $multiport -j ACCEPT
