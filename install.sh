@@ -1051,12 +1051,12 @@ stop_firewall(){
 		systemctl stop firewalld
 		# 设置开机禁用防火墙
 		systemctl disable firewalld.service
-		echo " 关闭防火墙."
+		echo -e "\n$red 该脚本已自动关闭防火墙... $none\n"
 	elif [[ $(command -v apt-get) ]] && [[ $(command -v systemctl) ]] && [[ $(command -v ufw) ]]; then
 		# Debian or Ubuntu
 		# 关闭防火墙
 		ufw disable
-		echo " 关闭防火墙.."
+		echo -e "\n$red 该脚本已自动关闭防火墙...... $none\n"
 	fi
 }
 
