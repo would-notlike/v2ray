@@ -2279,7 +2279,7 @@ get_v2ray_vmess_URL_link() {
 	echo
 	echo -e ${cyan}$vmess${none}
 	echo
-	echo -e "${yellow}免被墙..推荐使用JMS: ${cyan}https://www.itblogcn.com/article/1012.html${none}"
+	echo -e "${yellow}速度慢?怕被墙?..推荐使用JMS CN2 GIA高速线路: ${cyan}https://www.itblogcn.com/article/1012.html${none}"
 	echo
 	rm -rf /etc/v2ray/vmess_qr.json
 }
