@@ -116,6 +116,8 @@ if [[ $is_uninstall_v2ray && $is_uninstall_caddy ]]; then
 	echo
 	echo "反馈问题: https://github.com/233boy/v2ray/issues"
 	echo
+	echo -e "${yellow}速度慢?怕被墙?..推荐使用JMS CN2 GIA高速线路: ${cyan}https://www.itblogcn.com/article/1012.html${none}"
+	echo
 
 elif [[ $is_uninstall_v2ray ]]; then
 	pause
@@ -166,5 +168,7 @@ elif [[ $is_uninstall_v2ray ]]; then
 	echo "如果你觉得这个脚本有哪些地方不够好的话...请告诉我"
 	echo
 	echo "反馈问题: https://github.com/233boy/v2ray/issues"
+	echo
+	echo -e "${yellow}速度慢?怕被墙?..推荐使用JMS CN2 GIA高速线路: ${cyan}https://www.itblogcn.com/article/1012.html${none}"
 	echo
 fi
